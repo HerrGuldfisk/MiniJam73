@@ -12,7 +12,25 @@ public class Power : MonoBehaviour
     [SerializeField] Text endText;
     [SerializeField] int powerLossPerSecond;
 
-    float counter = 1;
+	private static Power _instance;
+	public static Power Instance
+	{
+		get { return _instance; }
+	}
+
+	private void Awake()
+	{
+		if (_instance != null && _instance != this)
+		{
+			Destroy(this.gameObject);
+			return;
+		}
+
+		_instance = this;
+		DontDestroyOnLoad(this.gameObject);
+	}
+
+	float counter = 1;
     int power;
 
     private void Start()

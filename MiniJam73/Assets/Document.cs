@@ -34,11 +34,11 @@ public class Document : MonoBehaviour
 	{
 		if (positive)
 		{
-			Debug.Log("+" + points);
+			Power.Instance.AddPower(points);
 		}
 		else
 		{
-			Debug.Log("-" + points);
+			Power.Instance.AddPower(-points);
 		}
 
 		Destroy(this.gameObject);
