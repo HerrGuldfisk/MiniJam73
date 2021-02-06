@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class TextManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+	public List<string> firstName;
+	public List<string> lastName;
+
+	// Start is called before the first frame update
+	void Start()
     {
-        
-    }
+		firstName = Names.firstName;
+		lastName = Names.lastName;
+	}
+
+	public void CreateText()
+	{
+		/*
+		int totTexts = Texts.texts.Count;
+
+		Random.Range(0, )
+
+		TextAlignment = Texts.texts.Count*/
+	}
 }

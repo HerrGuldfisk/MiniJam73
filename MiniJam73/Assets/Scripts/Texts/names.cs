@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class names : ScriptableObject
+public class Names : ScriptableObject
 {
-	public List<string> firstName = new List<string>();
-	public List<string> lastName = new List<string>();
+	public static List<string> firstName = new List<string>
+	{
+		"Carl",
+		"Margeret"
+	};
+	public static List<string> lastName = new List<string>
+	{
+		"von Tratt",
+		"Bueyer"
+	};
+
+
 }

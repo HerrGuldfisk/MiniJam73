@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class Texts : ScriptableObject
 {
-	public Dictionary<string, int> texts;
-
-	public List<string> names;
-
-	private void Awake()
+	//public static List<string, int> texts = new List<string, int>
 	{
-		texts = new Dictionary<string, int>();
+		""
+	};
 
-	}
 }
