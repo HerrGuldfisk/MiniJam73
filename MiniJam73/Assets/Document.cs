@@ -16,6 +16,8 @@ public class Document : MonoBehaviour
 
 	private void Start()
     {
+		// worst line of code ever written.
+		GetComponent<DragDrop>().canvas = transform.parent.GetComponent<Canvas>();
 		TextManager.Instance.CreateText(this);
     }
 
