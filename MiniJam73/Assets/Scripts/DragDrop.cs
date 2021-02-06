@@ -16,6 +16,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		canvasGroup = GetComponent<CanvasGroup>();
 	}
 
+	private void Start()
+	{
+		canvas = GetComponentInParent<Canvas>();
+	}
+
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 		canvas.sortingOrder = 15;
@@ -25,7 +30,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnDrag(PointerEventData eventData)
 	{
-		Debug.Log("OnDrag");
 		rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 	}
 
@@ -38,14 +42,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
-		Debug.Log("test");
+
 	}
-
-	// Start is called before the first frame update
-	void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

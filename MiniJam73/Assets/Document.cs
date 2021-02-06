@@ -9,9 +9,13 @@ public class Document : MonoBehaviour
     string question;
     [SerializeField] Text textComp;
 
-    private void Start()
+	private void Awake()
+	{
+		transform.SetParent(GameObject.FindGameObjectWithTag("Paper Canvas").transform);
+	}
+
+	private void Start()
     {
-        transform.SetParent(GameObject.FindGameObjectWithTag("Paper Canvas").transform);
 		TextManager.Instance.CreateText(this);
     }
 
@@ -28,6 +32,15 @@ public class Document : MonoBehaviour
 
 	public void RunEffect(bool positive)
 	{
-		Debug.Log("-" + points);
+		if (positive)
+		{
+			Debug.Log("+" + points);
+		}
+		else
+		{
+			Debug.Log("-" + points);
+		}
+
+		Destroy(this.gameObject);
 	}
 }
