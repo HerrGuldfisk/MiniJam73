@@ -27,7 +27,6 @@ public class Power : MonoBehaviour
 		}
 
 		_instance = this;
-		DontDestroyOnLoad(this.gameObject);
 	}
 
 	float counter = 1;
@@ -35,7 +34,7 @@ public class Power : MonoBehaviour
 
     private void Start()
     {
-        endScreen.alpha = 0;
+		endScreen.gameObject.SetActive(false);
         power = startPower;
         SetBar();
     }
@@ -63,14 +62,14 @@ public class Power : MonoBehaviour
 
     void Win()
     {
-        endScreen.alpha = 1;
-        endText.text = "win";
+		endScreen.gameObject.SetActive(true);
+		endText.text = "win";
     }
 
     void Loose()
     {
-        endScreen.alpha = 1;
-        endText.text = "defeat";
+		endScreen.gameObject.SetActive(true);
+		endText.text = "defeat";
     }
 
     private void Update()
