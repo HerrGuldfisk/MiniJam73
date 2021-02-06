@@ -414,7 +414,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.897
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -572,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5.5214, y: 15.0053}
-  m_SizeDelta: {x: 7.8501, y: -36.5753}
+  m_AnchoredPosition: {x: 2.8451, y: 15.0053}
+  m_SizeDelta: {x: 2.7217, y: -36.5753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &315808009984827505
 CanvasRenderer:
