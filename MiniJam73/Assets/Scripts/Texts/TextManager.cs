@@ -38,6 +38,7 @@ public class TextManager : MonoBehaviour
 		lastName = Names.lastName;
 
 		numTexts = Texts.texts.Count;
+		Debug.Log(numTexts);
 	}
 
 	public void CreateText(Document document)
