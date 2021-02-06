@@ -10,8 +10,10 @@ public class Power : MonoBehaviour
     [SerializeField] int startPower = 15;
     [SerializeField] CanvasGroup endScreen;
     [SerializeField] Text endText;
+    [SerializeField] int powerLossPerSecond;
 
-    public int power;
+    float counter = 1;
+    int power;
 
     private void Start()
     {
@@ -55,13 +57,11 @@ public class Power : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        counter -= Time.deltaTime;
+        if (counter <= 0)
         {
-            AddPower(5);
-        }
-        else if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            AddPower(-5);
+            AddPower(-powerLossPerSecond);
+            counter = 1;
         }
     }
 }
