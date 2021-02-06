@@ -11,6 +11,6 @@ public class Texts : ScriptableObject
 	private void Awake()
 	{
 		texts = new Dictionary<string, int>();
-		names =
+
 	}
 }
