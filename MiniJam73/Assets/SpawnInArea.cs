@@ -7,7 +7,7 @@ public class SpawnInArea : MonoBehaviour
     [SerializeField] GameObject spawnObject;
     [SerializeField] float secBetweenSpawn;
     float timer;
-
+     
     private void Start()
     {
         timer = secBetweenSpawn;
