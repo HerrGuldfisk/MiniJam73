@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Document : MonoBehaviour
 {
-    public bool yesIsCorrect = true;
+    public int points = 0;
     string question;
     [SerializeField] Text textComp;
 
@@ -20,8 +20,8 @@ public class Document : MonoBehaviour
         textComp.text = question;
     }
 
-    public void setAnswer(bool _yesIsCorrect)
+    public void setAnswer(int _points)
     {
-        yesIsCorrect = _yesIsCorrect;
+        points = _points;
     }
 }
