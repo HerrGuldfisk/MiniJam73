@@ -13,6 +13,24 @@ public class TextManager : MonoBehaviour
 
 	public GameObject document;
 
+	private static TextManager _instance;
+	public static TextManager Instance
+	{
+		get { return _instance; }
+	}
+
+	private void Awake()
+	{
+		if (_instance != null && _instance != this)
+		{
+			Destroy(this.gameObject);
+			return;
+		}
+
+		_instance = this;
+		DontDestroyOnLoad(this.gameObject);
+	}
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -22,11 +40,14 @@ public class TextManager : MonoBehaviour
 		numTexts = Texts.texts.Count;
 	}
 
-	public void CreateText()
+	public void CreateText(Document document)
 	{
-		string tempText = Texts.texts[Random.Range(0, numTexts - 1)].text;
-		int points = Texts.texts[Random.Range(0, numTexts - 1)].point;
+		int tempNumber = Random.Range(0, numTexts - 1);
 
-		Instantiate(document, transform).GetComponent<Document>().SetText(tempText);
+		string tempText = Texts.texts[Random.Range(0, tempNumber)].text;
+		int tempPoints = Texts.texts[Random.Range(0, tempNumber)].point;
+
+		document.SetText(tempText);
+		document.SetPoints(tempPoints);
 	}
 }

@@ -12,6 +12,7 @@ public class Document : MonoBehaviour
     private void Start()
     {
         transform.SetParent(GameObject.FindGameObjectWithTag("Paper Canvas").transform);
+		TextManager.Instance.CreateText(this);
     }
 
     public void SetText(string _question)
@@ -20,8 +21,13 @@ public class Document : MonoBehaviour
         textComp.text = question;
     }
 
-    public void setAnswer(int _points)
+    public void SetPoints(int _points)
     {
         points = _points;
     }
+
+	public void RunEffect(bool positive)
+	{
+		Debug.Log("-" + points);
+	}
 }

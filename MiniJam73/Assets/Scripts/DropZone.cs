@@ -16,13 +16,11 @@ public class DropZone : MonoBehaviour, IDropHandler
 
 			if (positive)
 			{
-				// Add what happens whe the card is dropped.
-
-				// eventData.pointerDrag...
+				eventData.pointerDrag.GetComponent<Document>().RunEffect(positive);
 			}
 			else
 			{
-				// If a task is denied...
+				eventData.pointerDrag.GetComponent<Document>().RunEffect(positive);
 			}
 		}
 	}
