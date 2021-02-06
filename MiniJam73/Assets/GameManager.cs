@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    void Update()
+	private void Start()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+	void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
