@@ -36,7 +36,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-		Debug.Log("EnfDrag");
+		Debug.Log("EndDrag");
 		canvas.sortingOrder = 10;
 		canvasGroup.alpha = 1f;
 		canvasGroup.blocksRaycasts = true;
@@ -44,7 +44,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
-
+		Debug.Log("Click");
 	}
 
     // Update is called once per frame
