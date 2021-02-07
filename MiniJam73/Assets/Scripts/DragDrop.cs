@@ -15,7 +15,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 	{
 		rectTransform = GetComponent<RectTransform>();
 		canvasGroup = GetComponent<CanvasGroup>();
-		cursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<CursorMod>();
+
+		if (GameObject.FindGameObjectWithTag("Cursor"))
+        {
+			cursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<CursorMod>();
+		}
 	}
 
 	public void OnBeginDrag(PointerEventData eventData)
