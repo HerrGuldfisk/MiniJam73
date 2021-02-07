@@ -47,7 +47,7 @@ public class Power : MonoBehaviour
 		}
 		else
 		{
-			AudioManager.Instance.Play("Powerdecrease");
+			AudioManager.Instance.Play("PowerDecrease");
 		}
 
         power += powerChange;
