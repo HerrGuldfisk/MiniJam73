@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
 
 	public string[] paramNames;
 
-	public bool tickTock;
+	public bool tickTock = true;
 
 	private void Start()
 	{
@@ -93,15 +93,20 @@ public class AudioManager : MonoBehaviour
 
 		foreach (AudioSource s in audioSources)
 		{
-			if (s.name == "TickTock")
+			if (s.clip == null) { return; }
+
+			Debug.Log(s.clip.ToString());
+
+			if (s.clip.ToString() == "soundtrack")
 			{
-				if(Power.Instance.power >= 20)
+				Debug.Log("enter clip");
+				if(Power.Instance.power >= 80)
 				{
-					s.volume = 0.2f;
+					s.volume = 0.1f;
 				}
 				else
 				{
-					s.volume = 4 / Power.Instance.power;
+					s.volume = 1 - (Power.Instance.power / 100);
 				}
 
 			}
