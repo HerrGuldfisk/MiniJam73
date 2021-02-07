@@ -12,6 +12,7 @@ public class Document : MonoBehaviour
 	private void Awake()
 	{
 		transform.SetParent(GameObject.FindGameObjectWithTag("Paper Canvas").transform);
+		DocumentCounter.Instance.documents.Add(this.gameObject);
 	}
 
 	private void Start()
@@ -45,6 +46,7 @@ public class Document : MonoBehaviour
 			Power.Instance.AddPower(-points);
 		}
 
+		DocumentCounter.Instance.documents.Remove(this.gameObject);
 		Destroy(this.gameObject);
 	}
 }

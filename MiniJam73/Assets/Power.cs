@@ -92,7 +92,7 @@ public class Power : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter <= 0)
         {
-            AddPower(-powerLossPerSecond, false);
+            AddPower( -0.1f * DocumentCounter.Instance.documents.Count , false);
             counter = 1;
         }
     }

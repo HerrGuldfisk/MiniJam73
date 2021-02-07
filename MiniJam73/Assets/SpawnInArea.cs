@@ -28,6 +28,9 @@ public class SpawnInArea : MonoBehaviour
 	[SerializeField] int longGame = 135;
 	[SerializeField] int extremeGame = 180;
 
+
+	float noDocTimer = 0;
+
     private void Start()
     {
         GetComponent<SpriteRenderer>().enabled = false;
@@ -76,7 +79,6 @@ public class SpawnInArea : MonoBehaviour
 			}
 		}
 
-
 		/*
         singleTimer -= Time.deltaTime;
         if (singleTimer < 0)
@@ -92,6 +94,23 @@ public class SpawnInArea : MonoBehaviour
 
             singleTimer = secBetweenSpawn;
         }*/
+	}
+
+	private void FixedUpdate()
+	{
+
+		if (DocumentCounter.Instance.documents.Count == 0)
+		{
+			noDocTimer -= Time.fixedDeltaTime;
+
+			if(noDocTimer <= 0)
+			{
+				AudioManager.Instance.Play("DealDocument");
+				Spawn();
+
+				noDocTimer = Random.Range(0.3f, 1.2f);
+			}
+		}
 	}
 
 
