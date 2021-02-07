@@ -112,9 +112,10 @@ public class AudioManager : MonoBehaviour
 
 		foreach (AudioSource s in audioSources)
 		{
+			if (s.clip == null) { return; }
+
 			if (s.clip.name == "soundtrack")
 			{
-				Debug.Log("enter clip");
 				if(Power.Instance.power >= 80)
 				{
 					s.volume = 0.1f;
