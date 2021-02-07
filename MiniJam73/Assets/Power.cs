@@ -9,7 +9,7 @@ public class Power : MonoBehaviour
     [SerializeField] Slider slider;
 
     [SerializeField] float maxPower = 100;
-    [SerializeField] float startPower = 15;
+    [SerializeField] float startPower = 40;
     [SerializeField] float powerLossPerSecond;
 
     [SerializeField] string winScenePath;
