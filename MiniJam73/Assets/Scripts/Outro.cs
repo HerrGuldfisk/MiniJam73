@@ -22,6 +22,7 @@ public class Outro : MonoBehaviour
         total = texts.Count;
         current = 0;
         text.text = texts[0];
+        Cursor.visible = true;
     }
 
     private void Update()
