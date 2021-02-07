@@ -434,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
       propertyPath: groupSpawn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
       propertyPath: spawnObject
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 230760312360302472, guid: 5eba1cdcb26275346b34e3de105f6ec5, type: 3}
     - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
       propertyPath: secBetweenSpawn
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
