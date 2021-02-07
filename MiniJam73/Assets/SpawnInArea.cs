@@ -6,7 +6,11 @@ public class SpawnInArea : MonoBehaviour
 {
     [SerializeField] GameObject spawnObject;
     [SerializeField] float secBetweenSpawn;
+
+	[SerializeField] bool groupSpawn;
+
     float timer;
+	float totTime = 0;
 
     private void Start()
     {
@@ -24,11 +28,56 @@ public class SpawnInArea : MonoBehaviour
 
     private void Update()
     {
+		totTime += Time.deltaTime;
+
         timer -= Time.deltaTime;
         if (timer < 0)
         {
-            Spawn();
+			if (groupSpawn)
+			{
+				GroupSpawn();
+			}
+			else
+			{
+				Spawn();
+			}
+
             timer = secBetweenSpawn;
         }
     }
+
+
+	private void GroupSpawn()
+	{
+		int x = 0;
+
+		// Number of documents based on time.
+		if (totTime <= 10)
+		{
+			x = 4;
+		}
+		else if(totTime <= 120)
+		{
+			x = 6;
+		}
+		else if(totTime <= 180)
+		{
+			x = 10;
+		}
+
+		AudioManager.Instance.Play("DealDocument");
+
+		// The spwaning
+		for (int i = 0; i < x; i++)
+		{
+			Spawn();
+
+		}
+	}
+
+
+	public void Reset()
+	{
+		totTime = 0;
+	}
 }

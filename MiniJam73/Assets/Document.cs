@@ -36,10 +36,12 @@ public class Document : MonoBehaviour
 	{
 		if (positive)
 		{
+			AudioManager.Instance.Play("ApproveDocument");
 			Power.Instance.AddPower(points);
 		}
 		else
 		{
+			AudioManager.Instance.Play("RejectDocument");
 			Power.Instance.AddPower(-points);
 		}
 

@@ -41,6 +41,15 @@ public class Power : MonoBehaviour
 
     public void AddPower(int powerChange)
     {
+		if (powerChange > 0)
+		{
+			AudioManager.Instance.Play("PowerIncrease");
+		}
+		else
+		{
+			AudioManager.Instance.Play("Powerdecrease");
+		}
+
         power += powerChange;
 
         if (power >= maxPower)

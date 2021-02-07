@@ -433,12 +433,16 @@ PrefabInstance:
       value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
+      propertyPath: groupSpawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
       propertyPath: spawnObject
       value: 
       objectReference: {fileID: 230760312360302472, guid: 5eba1cdcb26275346b34e3de105f6ec5, type: 3}
     - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
       propertyPath: secBetweenSpawn
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
@@ -1013,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
       propertyPath: sounds.Array.data[5].name
       value: PowerDecrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
       propertyPath: sounds.Array.data[6].name
