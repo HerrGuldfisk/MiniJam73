@@ -957,6 +957,10 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3625250024273320443, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
 --- !u!1001 &8661159281827325190
