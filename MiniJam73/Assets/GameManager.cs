@@ -18,5 +18,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		AudioManager.Instance.Play("MainTheme");
+		AudioManager.Instance.tickTock = true;
     }
 }
