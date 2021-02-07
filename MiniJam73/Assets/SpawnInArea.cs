@@ -5,11 +5,27 @@ using UnityEngine;
 public class SpawnInArea : MonoBehaviour
 {
     [SerializeField] GameObject spawnObject;
-    [SerializeField] float secBetweenSpawn;
-	[SerializeField] bool groupSpawn;
 
-    float timer = 3;
+	[SerializeField] bool singleSpawn;
+	[SerializeField] float singleSpawnTimer;
+	[SerializeField] bool singleRandomized;
+
+	[SerializeField] bool groupSpawn;
+	[SerializeField] float groupSpawnTimer;
+	[SerializeField] bool groupRandomized;
+
+	[SerializeField] bool randomized;
+	[SerializeField] float minRandom;
+	[SerializeField] float maxRandom;
+
+	float singleTimer;
+	float groupTimer;
 	float totTime = 0;
+
+	[SerializeField] int shortGame = 45;
+	[SerializeField] int mediumGame = 90;
+	[SerializeField] int longGame = 135;
+	[SerializeField] int extremeGame = 180;
 
     private void Start()
     {
@@ -28,8 +44,40 @@ public class SpawnInArea : MonoBehaviour
     {
 		totTime += Time.deltaTime;
 
-        timer -= Time.deltaTime;
-        if (timer < 0)
+		if (singleSpawn)
+		{
+			singleTimer -= Time.deltaTime;
+
+			if (singleTimer <= 0)
+			{
+				Spawn();
+
+				if (randomized)
+				{
+					singleTimer = Random.Range(singleSpawnTimer - minRandom, singleSpawnTimer + maxRandom);
+				}
+			}
+		}
+
+		if (singleSpawn)
+		{
+			groupTimer -= Time.deltaTime;
+
+			if (groupTimer <= 0)
+			{
+				GroupSpawn();
+
+				if (randomized)
+				{
+					groupTimer = Random.Range(groupSpawnTimer - minRandom, groupSpawnTimer + maxRandom);
+				}
+			}
+		}
+
+
+		/*
+        singleTimer -= Time.deltaTime;
+        if (singleTimer < 0)
         {
 			if (groupSpawn)
 			{
@@ -40,9 +88,9 @@ public class SpawnInArea : MonoBehaviour
 				Spawn();
 			}
 
-            timer = secBetweenSpawn;
-        }
-    }
+            singleTimer = secBetweenSpawn;
+        }*/
+	}
 
 
 	private void GroupSpawn()
@@ -50,15 +98,19 @@ public class SpawnInArea : MonoBehaviour
 		int x = 0;
 
 		// Number of documents based on time.
-		if (totTime <= 10)
+		if (totTime <= shortGame)
 		{
 			x = 4;
 		}
-		else if(totTime <= 120)
+		else if(totTime <= mediumGame)
 		{
 			x = 6;
 		}
-		else if(totTime <= 180)
+		else if(totTime <= longGame)
+		{
+			x = 8;
+		}
+		else if (totTime <= extremeGame)
 		{
 			x = 10;
 		}

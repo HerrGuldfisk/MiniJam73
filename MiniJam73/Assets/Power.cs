@@ -40,15 +40,18 @@ public class Power : MonoBehaviour
         SetBar();
     }
 
-    public void AddPower(float powerChange)
+    public void AddPower(float powerChange, bool sound=true)
     {
-		if (powerChange > 0)
+		if (sound)
 		{
-			AudioManager.Instance.Play("PowerIncrease");
-		}
-		else
-		{
-			AudioManager.Instance.Play("PowerDecrease");
+			if (powerChange > 0)
+			{
+				AudioManager.Instance.Play("PowerIncrease");
+			}
+			else
+			{
+				AudioManager.Instance.Play("PowerDecrease");
+			}
 		}
 
         power += powerChange;
@@ -87,7 +90,7 @@ public class Power : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter <= 0)
         {
-            AddPower(-powerLossPerSecond);
+            AddPower(-powerLossPerSecond, false);
             counter = 1;
         }
     }
