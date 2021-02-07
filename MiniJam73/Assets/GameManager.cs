@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject heldDoc;
+
 	void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))

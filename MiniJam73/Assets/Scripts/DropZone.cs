@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class DropZone : MonoBehaviour, IDropHandler
+public class DropZone : MonoBehaviour
 {
 	public bool positive;
 	[SerializeField] float feedbackTextTime = 3;
 	[SerializeField] Text feedbackText;
 	CursorMod cursor;
+	[SerializeField] RectTransform rectTrans;
+	GameManager manager;
 
     private void Start()
     {
@@ -18,38 +20,52 @@ public class DropZone : MonoBehaviour, IDropHandler
 		{
 			cursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<CursorMod>();
 		}
+		rectTrans = GetComponent<RectTransform>();
+
+		if (GameObject.FindGameObjectWithTag("Manager"))
+        {
+			manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        }
 	}
 
-	public void OnDrop(PointerEventData eventData)
-	{
-		Debug.Log("OnDrop");
-		if ( eventData.pointerDrag != null)
-		{
-			eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-			Document doc = eventData.pointerDrag.GetComponent<Document>();
-
-			if (feedbackText)
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+			if (manager.heldDoc)
             {
-				StartCoroutine(ShowFeedback(doc.points));
-			}
+				Document doc = manager.heldDoc.GetComponent<Document>();
+				if (rectOverlaps(doc.GetComponent<RectTransform>(), rectTrans))
+				{
+					if (feedbackText)
+					{
+						StartCoroutine(ShowFeedback(doc.points));
+					}
 
-			if (positive)
-			{
-				doc.RunEffect(positive);
-			}
-			else
-			{
-				doc.RunEffect(positive);
-			}
+					if (positive)
+					{
+						doc.RunEffect(positive);
+					}
+					else
+					{
+						doc.RunEffect(positive);
+					}
 
-			if (cursor)
-			{
-				print("cursor is here!");
-				cursor.ResetImagePos();
-				cursor.SetHand(true);
+					if (cursor)
+					{
+						cursor.ResetImagePos();
+						cursor.SetHand(true);
+					}
+
+					manager.heldDoc = null;
+				}
 			}
+            else
+            {
+				Debug.Log("no document is being held");
+            }
 		}
-	}
+    }
 
 	IEnumerator ShowFeedback(int points)
     {
@@ -59,4 +75,15 @@ public class DropZone : MonoBehaviour, IDropHandler
 
 		feedbackText.text = "";
 	}
+
+	bool rectOverlaps(RectTransform rectTrans1, RectTransform rectTrans2)
+	{
+		Rect rect1 = new Rect(rectTrans1.position.x, rectTrans1.position.y, rectTrans1.rect.width, rectTrans1.rect.height);
+		Rect rect2 = new Rect(rectTrans2.position.x, rectTrans2.position.y, rectTrans2.rect.width, rectTrans2.rect.height);
+
+		Debug.Log("rect overlap: " + rect1.Overlaps(rect2));
+
+		return rect1.Overlaps(rect2);
+	}
+
 }

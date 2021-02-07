@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
 	public Canvas canvas;
-
 	private RectTransform rectTransform;
 	private CanvasGroup canvasGroup;
 	CursorMod cursor;
+	GameManager manager;
 
 	private void Awake()
 	{
@@ -20,13 +20,17 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
 			cursor = GameObject.FindGameObjectWithTag("Cursor").GetComponent<CursorMod>();
 		}
+
+		if (GameObject.FindGameObjectWithTag("Manager"))
+        {
+			manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+		}
 	}
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
-		// Debug.Log("OnDrag");
-		// canvas.sortingOrder = 15;
 		canvasGroup.blocksRaycasts = false;
+		manager.heldDoc = gameObject;
 
 		if (cursor)
         {
@@ -42,9 +46,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-		// Debug.Log("EndDrag");
 		AudioManager.Instance.Play("DropDocument");
 		canvasGroup.blocksRaycasts = true;
+		//manager.heldDoc = null;
 
 		if (cursor)
         {

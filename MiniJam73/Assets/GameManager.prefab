@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3575574296077414339}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5e352d6e5201b439a90023df04e79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heldDoc: {fileID: 0}
