@@ -30,7 +30,7 @@ public class Power : MonoBehaviour
 	}
 
 	float counter = 1;
-    int power;
+    public int power { get; private set; }
 
     private void Start()
     {

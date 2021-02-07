@@ -36,10 +36,20 @@ public class AudioManager : MonoBehaviour
 
 	public string[] paramNames;
 
+	public bool tickTock;
+
 	private void Start()
 	{
 		LoadAllSounds();
 		SetAudioLevels();
+	}
+
+	private void FixedUpdate()
+	{
+		if (tickTock)
+		{
+			TickTockVolume();
+		}
 	}
 
 	private void LoadAllSounds()
@@ -71,7 +81,34 @@ public class AudioManager : MonoBehaviour
 		s.source.Play();
 	}
 
+	public void PlayTimer()
+	{
+		Play("Tick-Tock", true);
+		tickTock = true;
+	}
 
+	public void TickTockVolume()
+	{
+		AudioSource[] audioSources = GetComponents<AudioSource>();
+
+		foreach (AudioSource s in audioSources)
+		{
+			if (s.name == "TickTock")
+			{
+				if(Power.Instance.power >= 20)
+				{
+					s.volume = 0.2f;
+				}
+				else
+				{
+					s.volume = 4 / Power.Instance.power;
+				}
+
+			}
+		}
+	}
+
+	#region not needed
 	public void Muted()
 	{
 		// Add a muted function that toggle sound volume.
@@ -122,4 +159,5 @@ public class AudioManager : MonoBehaviour
 	{
 		return paramValue;
 	}
+	#endregion
 }
