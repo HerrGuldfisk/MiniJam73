@@ -17,7 +17,7 @@ public class DocumentCounter : MonoBehaviour
 		}
 		else
 		{
-			_instance = this;s
+			_instance = this;
 		}
 	}
 	#endregion

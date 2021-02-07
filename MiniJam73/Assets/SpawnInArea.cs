@@ -20,7 +20,7 @@ public class SpawnInArea : MonoBehaviour
 
 
 	float singleTimer;
-	float groupTimer;
+	float groupTimer = 20;
 	float totTime = 0;
 
 	[SerializeField] int shortGame = 45;
@@ -121,19 +121,19 @@ public class SpawnInArea : MonoBehaviour
 		// Number of documents based on time.
 		if (totTime <= shortGame)
 		{
-			x = 4;
+			x = 3;
 		}
 		else if(totTime <= mediumGame)
 		{
-			x = 6;
+			x = 4;
 		}
 		else if(totTime <= longGame)
 		{
-			x = 8;
+			x = 5;
 		}
 		else if (totTime <= extremeGame)
 		{
-			x = 10;
+			x = 6;
 		}
 
 		AudioManager.Instance.Play("DealDocument");
