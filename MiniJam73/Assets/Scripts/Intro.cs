@@ -18,6 +18,7 @@ public class Intro : MonoBehaviour
         total = texts.Count;
         current = 0;
         text.text = texts[0];
+		AudioManager.Instance.Play("Intro");
     }
 
     private void Update()

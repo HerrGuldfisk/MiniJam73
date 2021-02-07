@@ -72,13 +72,17 @@ public class AudioManager : MonoBehaviour
 
 		foreach (AudioSource s in audioSources)
 		{
-			if (s.clip.name ==_name)
+			if (s.clip != null)
 			{
-				return s;
-			}
-			else
-			{
-				Debug.LogWarning("Sound: " + name + " not found!");
+
+				if (s.clip.name == _name)
+				{
+					return s;
+				}
+				else
+				{
+					Debug.LogWarning("Sound: " + name + " not found!");
+				}
 			}
 		}
 		return null;

@@ -47,31 +47,74 @@ MonoBehaviour:
   changedValue: 
   sounds:
   - name: GrabDocument
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 11b58fc9f7f28674b90d9683e6dfda8e, type: 3}
     channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: DropDocument
-    clip: {fileID: 8300000, guid: 6269870e2b3850845b9cac588ec00240, type: 3}
+    clip: {fileID: 8300000, guid: 6e0f675f6bb48c047ae49701ef6e1e53, type: 3}
     channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ApproveDocument
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 6a65b54bbfba03543b9915f55890de3c, type: 3}
     channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: RejectDocument
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9af424f6af0ea6e498dcf76ea0fac68c, type: 3}
     channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: PowerIncrease
+    clip: {fileID: 8300000, guid: 9a1f7abcf1a086548b511f202c66c661, type: 3}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerDecrease
+    clip: {fileID: 8300000, guid: faf040160d99ad64da96bee60ba7d00a, type: 3}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: fe61ab7936c050a42939b8f6a2b0e7f4, type: 3}
+    channel: {fileID: 8490547837896254819, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DealDocument
+    clip: {fileID: 8300000, guid: 6e0f675f6bb48c047ae49701ef6e1e53, type: 3}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TickTock
+    clip: {fileID: 0}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Intro
+    clip: {fileID: 0}
+    channel: {fileID: 8490547837896254819, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   paramNames: []
+  tickTock: 0
