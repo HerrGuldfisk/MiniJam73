@@ -44,6 +44,7 @@ public class DropZone : MonoBehaviour, IDropHandler
 
 			if (cursor)
 			{
+				print("cursor is here!");
 				cursor.ResetImagePos();
 				cursor.SetHand(true);
 			}
