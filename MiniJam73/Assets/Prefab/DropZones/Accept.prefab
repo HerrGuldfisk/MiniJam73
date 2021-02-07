@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 34618a7c417767744bb2a477053c16bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe285bed9d54d0f478ba66b16f69f192, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,6 +91,7 @@ MonoBehaviour:
   positive: 1
   feedbackTextTime: 3
   feedbackText: {fileID: 0}
+  rectTrans: {fileID: 0}
 --- !u!1 &2039315241706271095
 GameObject:
   m_ObjectHideFlags: 0
