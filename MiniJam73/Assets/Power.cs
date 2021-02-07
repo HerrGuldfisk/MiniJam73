@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Power : MonoBehaviour
 {
     [SerializeField] Slider slider;
+
     [SerializeField] float maxPower = 100;
     [SerializeField] float startPower = 15;
-    [SerializeField] CanvasGroup endScreen;
-    [SerializeField] Text endText;
     [SerializeField] float powerLossPerSecond;
+
+    [SerializeField] string winScenePath;
+    [SerializeField] string looseScenePath;
 
     private static Power _instance;
 	public static Power Instance
@@ -35,7 +38,6 @@ public class Power : MonoBehaviour
 
     private void Start()
     {
-		endScreen.gameObject.SetActive(false);
         power = startPower;
         SetBar();
     }
@@ -75,14 +77,12 @@ public class Power : MonoBehaviour
 
     void Win()
     {
-		endScreen.gameObject.SetActive(true);
-		endText.text = "win";
+        SceneManager.LoadScene(winScenePath);
     }
 
     void Loose()
     {
-		endScreen.gameObject.SetActive(true);
-		endText.text = "defeat";
+		SceneManager.LoadScene(looseScenePath);
     }
 
     private void Update()
