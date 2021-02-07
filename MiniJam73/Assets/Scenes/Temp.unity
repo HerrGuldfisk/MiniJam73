@@ -1023,13 +1023,33 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a65b54bbfba03543b9915f55890de3c, type: 3}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9af424f6af0ea6e498dcf76ea0fac68c, type: 3}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a1f7abcf1a086548b511f202c66c661, type: 3}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
       propertyPath: sounds.Array.data[4].name
       value: PowerIncrease
       objectReference: {fileID: 0}
     - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: faf040160d99ad64da96bee60ba7d00a, type: 3}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
       propertyPath: sounds.Array.data[5].name
       value: PowerDecrease
       objectReference: {fileID: 0}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fe61ab7936c050a42939b8f6a2b0e7f4, type: 3}
     - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
       propertyPath: sounds.Array.data[6].loop
       value: 1
