@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Power : MonoBehaviour
 {
     [SerializeField] Slider slider;
-    [SerializeField] int maxPower = 100;
-    [SerializeField] int startPower = 15;
+    [SerializeField] float maxPower = 100;
+    [SerializeField] float startPower = 15;
     [SerializeField] CanvasGroup endScreen;
     [SerializeField] Text endText;
-    [SerializeField] int powerLossPerSecond;
+    [SerializeField] float powerLossPerSecond;
 
 	private static Power _instance;
 	public static Power Instance
@@ -30,7 +30,11 @@ public class Power : MonoBehaviour
 	}
 
 	float counter = 1;
-    public int power { get; private set; }
+<<<<<<< HEAD
+    public float power { get; private set; }
+=======
+    float power;
+>>>>>>> a39ee3320498039bf4c8ca958462aec95cbb5cc0
 
     private void Start()
     {
@@ -39,7 +43,7 @@ public class Power : MonoBehaviour
         SetBar();
     }
 
-    public void AddPower(int powerChange)
+    public void AddPower(float powerChange)
     {
 		if (powerChange > 0)
 		{
