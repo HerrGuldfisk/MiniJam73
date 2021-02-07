@@ -26,8 +26,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		canvasGroup.alpha = .8f;
 		canvasGroup.blocksRaycasts = false;
 
-		cursor.SetHand(false);
-		cursor.SetImagePos((Vector2)transform.position + new Vector2(78, -400));
+		if (cursor)
+        {
+			cursor.SetHand(false);
+			cursor.SetImagePos((Vector2)transform.position + new Vector2(78, -400));
+		}
 	}
 
 	public void OnDrag(PointerEventData eventData)
@@ -43,8 +46,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		canvasGroup.alpha = 1f;
 		canvasGroup.blocksRaycasts = true;
 
-		cursor.SetHand(true);
-		cursor.ResetImagePos();
+		if (cursor)
+        {
+			cursor.SetHand(true);
+			cursor.ResetImagePos();
+		}
 	}
 
 	public void OnPointerDown(PointerEventData eventData)
