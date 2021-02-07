@@ -730,6 +730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 7151688298650198165, guid: 42cd33fba001da143a5872753e3f35d9, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7151688298650198166, guid: 42cd33fba001da143a5872753e3f35d9, type: 3}
       propertyPath: m_PixelPerfect
       value: 1
@@ -1040,19 +1044,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 652300074, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 361
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 652300074, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -152
+      value: -131
       objectReference: {fileID: 0}
     - target: {fileID: 678127532, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 351
+      value: 296
       objectReference: {fileID: 0}
     - target: {fileID: 678127532, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 678127533, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_Color.b
@@ -1072,11 +1076,11 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 2b3870890ead8754588a4ca6c60c0ad7, type: 3}
     - target: {fileID: 761683121, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -354
+      value: -312
       objectReference: {fileID: 0}
     - target: {fileID: 761683121, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 761683122, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_Color.b
@@ -1124,11 +1128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2039315241192801808, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -353
+      value: -308
       objectReference: {fileID: 0}
     - target: {fileID: 2039315241192801808, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -129
       objectReference: {fileID: 0}
     - target: {fileID: 2039315241604016729, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_PresetInfoIsWorld
