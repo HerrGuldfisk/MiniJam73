@@ -12,7 +12,10 @@ public class Power : MonoBehaviour
     [SerializeField] Text endText;
     [SerializeField] float powerLossPerSecond;
 
-	private static Power _instance;
+    float counter = 1;
+    public float power;
+
+    private static Power _instance;
 	public static Power Instance
 	{
 		get { return _instance; }
@@ -28,13 +31,6 @@ public class Power : MonoBehaviour
 
 		_instance = this;
 	}
-
-	float counter = 1;
-<<<<<<< HEAD
-    public float power { get; private set; }
-=======
-    float power;
->>>>>>> a39ee3320498039bf4c8ca958462aec95cbb5cc0
 
     private void Start()
     {
