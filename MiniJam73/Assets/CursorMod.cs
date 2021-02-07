@@ -9,11 +9,13 @@ public class CursorMod : MonoBehaviour
     [SerializeField] Sprite closedHand;
     [SerializeField] Image handImage;
     [HideInInspector] public bool handIsOpen;
+    Vector2 imageStartPos;
 
     private void Awake()
     {
         handImage.sprite = openHand;
         handIsOpen = true;
+        imageStartPos = handImage.transform.localPosition;
     }
 
     void Update()
@@ -33,5 +35,15 @@ public class CursorMod : MonoBehaviour
             handImage.sprite = closedHand;
         }
         handIsOpen = open;
+    }
+
+    public void SetImagePos(Vector2 pos)
+    {
+        handImage.transform.position = pos;
+    }
+
+    public void ResetImagePos()
+    {
+        handImage.transform.localPosition = imageStartPos;
     }
 }
