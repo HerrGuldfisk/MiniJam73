@@ -18,7 +18,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
-		Debug.Log("OnDrag");
+		// Debug.Log("OnDrag");
 		canvas.sortingOrder = 15;
 		canvasGroup.alpha = .8f;
 		canvasGroup.blocksRaycasts = false;
@@ -31,7 +31,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-		Debug.Log("EndDrag");
+		// Debug.Log("EndDrag");
+		AudioManager.Instance.Play("DropDocument");
 		canvas.sortingOrder = 10;
 		canvasGroup.alpha = 1f;
 		canvasGroup.blocksRaycasts = true;
@@ -39,7 +40,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
-		Debug.Log("Click");
+		// Debug.Log("Click");
+		AudioManager.Instance.Play("GrabDocument");
 	}
 
     // Update is called once per frame
