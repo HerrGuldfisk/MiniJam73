@@ -25,9 +25,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 		// Debug.Log("OnDrag");
-
-		canvas.sortingOrder = 15;
-		canvasGroup.alpha = .8f;
+		// canvas.sortingOrder = 15;
 		canvasGroup.blocksRaycasts = false;
 
 		if (cursor)
@@ -46,8 +44,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 	{
 		// Debug.Log("EndDrag");
 		AudioManager.Instance.Play("DropDocument");
-		canvas.sortingOrder = 10;
-		canvasGroup.alpha = 1f;
 		canvasGroup.blocksRaycasts = true;
 
 		if (cursor)
@@ -60,6 +56,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 	public void OnPointerDown(PointerEventData eventData)
 	{
 		// Debug.Log("Click");
+		transform.SetAsLastSibling();
 		AudioManager.Instance.Play("GrabDocument");
 	}
 }
