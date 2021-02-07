@@ -877,6 +877,10 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1315955555, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2039315241604016729, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
