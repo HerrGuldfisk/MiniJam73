@@ -6,15 +6,13 @@ public class SpawnInArea : MonoBehaviour
 {
     [SerializeField] GameObject spawnObject;
     [SerializeField] float secBetweenSpawn;
-
 	[SerializeField] bool groupSpawn;
 
-    float timer;
+    float timer = 3;
 	float totTime = 0;
 
     private void Start()
     {
-        timer = secBetweenSpawn;
         GetComponent<SpriteRenderer>().enabled = false;
     }
 
