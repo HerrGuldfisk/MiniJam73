@@ -534,6 +534,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
+      propertyPath: groupSpawnTimer
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125165169678695423, guid: 3c5c1b3bcbf5563448cd3e6e7b4546d0, type: 3}
       propertyPath: singleSpawnTimer
       value: 12
       objectReference: {fileID: 0}
