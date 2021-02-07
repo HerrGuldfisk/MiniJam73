@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Paper Canvas
   - AudioController
+  - Cursor
   layers:
   - Default
   - TransparentFX
