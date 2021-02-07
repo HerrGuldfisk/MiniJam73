@@ -23,7 +23,7 @@ public class Texts : ScriptableObject
 			"Proposal: Fire all policemen who doesn't follow your agenda", 5),
 
 		new textAndPoints("A dead hooker was found in your summer house,\n\n" +
-			"Proposal: Brag about it on national television", -15),
+			"Proposal: Brag about it on national television", -10),
 
 		new textAndPoints("Big Pharma is making big bucks on big insulin,\n\n" +
 			"Proposal: Inject some big insulin yourself", -4),
@@ -77,7 +77,7 @@ public class Texts : ScriptableObject
 			"Proposal: Go in and take control of them both", 6),
 
 		new textAndPoints("A loophole was discovered in the laws deciding the precidential election\n\n" +
-			"Proposal: Abuse it to extend your time as president", 12),
+			"Proposal: Abuse it to extend your time as president", 10),
 
 		new textAndPoints("The worlds wealthiest woman invites you to her private party\n\n" +
 			"Proposal: Attend", 3),
@@ -183,6 +183,15 @@ public class Texts : ScriptableObject
 
 		new textAndPoints("Assistant: Something urgent.\n\n" +
 			"Proposal: Put in pile on right", 3),
+
+		new textAndPoints("Occultism is popular.\n\n" +
+			"Proposal: Sacrifice a goat", 1),
+
+		new textAndPoints("Earth is dying.\n\n" +
+			"Proposal: Send people into the sun", -4),
+
+		new textAndPoints("Sand is blowing in from across the seas.\n\n" +
+			"Proposal: Ban sand", 1),
 	};
 
 }
