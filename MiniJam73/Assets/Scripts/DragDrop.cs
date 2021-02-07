@@ -9,11 +9,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
 	private RectTransform rectTransform;
 	private CanvasGroup canvasGroup;
+	CursorMod cursor;
 
 	private void Awake()
 	{
 		rectTransform = GetComponent<RectTransform>();
 		canvasGroup = GetComponent<CanvasGroup>();
+		cursor = GameObject.FindGameObjectWithTag("Player").GetComponent<CursorMod>();
 	}
 
 	public void OnBeginDrag(PointerEventData eventData)
@@ -23,6 +25,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		canvas.sortingOrder = 15;
 		canvasGroup.alpha = .8f;
 		canvasGroup.blocksRaycasts = false;
+
+		cursor.SetHand(false);
+		cursor.SetImagePos((Vector2)transform.position + new Vector2(78, -400));
 	}
 
 	public void OnDrag(PointerEventData eventData)
@@ -37,6 +42,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		canvas.sortingOrder = 10;
 		canvasGroup.alpha = 1f;
 		canvasGroup.blocksRaycasts = true;
+
+		cursor.SetHand(true);
+		cursor.ResetImagePos();
 	}
 
 	public void OnPointerDown(PointerEventData eventData)
@@ -44,10 +52,4 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		// Debug.Log("Click");
 		AudioManager.Instance.Play("GrabDocument");
 	}
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
