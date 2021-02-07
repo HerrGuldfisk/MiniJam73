@@ -45,8 +45,8 @@ public class TextManager : MonoBehaviour
 	{
 		int tempNumber = Random.Range(0, numTexts - 1);
 
-		string tempText = Texts.texts[Random.Range(0, tempNumber)].text;
-		int tempPoints = Texts.texts[Random.Range(0, tempNumber)].point;
+		string tempText = Texts.texts[tempNumber].text;
+		int tempPoints = Texts.texts[tempNumber].point;
 
 		document.SetText(tempText);
 		document.SetPoints(tempPoints);

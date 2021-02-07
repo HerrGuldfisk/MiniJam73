@@ -39,17 +39,18 @@ public class DropZone : MonoBehaviour
 				{
 					if (feedbackText)
 					{
-						StartCoroutine(ShowFeedback(doc.points));
+						if (positive)
+                        {
+							StartCoroutine(ShowFeedback(doc.points));
+						}
+                        else
+                        {
+							StartCoroutine(ShowFeedback(-doc.points));
+						}
+
 					}
 
-					if (positive)
-					{
-						doc.RunEffect(positive);
-					}
-					else
-					{
-						doc.RunEffect(positive);
-					}
+					doc.RunEffect(positive);
 
 					if (cursor)
 					{

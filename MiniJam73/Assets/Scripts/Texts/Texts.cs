@@ -54,22 +54,22 @@ public class Texts : ScriptableObject
 			"Proposal: Let her in.", -5),
 
 		new textAndPoints("A poll suggest that the public does not think your hairstyle is fashionable.\n\n" +
-			"Proposal: Get a trendy haircut.", +2),
+			"Proposal: Get a trendy haircut.", 2),
 
 		new textAndPoints("Representatives from your neighbour country is requesting financial aid.\n\n" +
-			"Proposal: Offer to pay them in exchange for the right to vetoe in their elections.", +10),
+			"Proposal: Offer to pay them in exchange for the right to vetoe in their elections.", 10),
 
 		new textAndPoints("A large newspaper magazine is accusing your party of having fiddled with the accountings.\n\n" +
-			"Proposal: Secterely setup an online underground community that spreads rumors blaming it all on your opponents.", +10),
+			"Proposal: Secterely setup an online underground community that spreads rumors blaming it all on your opponents.", 10),
 
 		new textAndPoints("A young politician is gaining on you in popularity.\n\n" +
-			"Proposal: Send out a hitman to kill him.", +5),
+			"Proposal: Send out a hitman to kill him.", 5),
 
-		new textAndPoints("There is a bunch of dogs running amok in the precidential building!\n\n" +
+		new textAndPoints("There is a bunch of dogs running amok in the precidential building!\n\n" + 
 			"Proposal: Release a bunch of cats too.", -4),
 
 		new textAndPoints("There is a man at the front door trying to sell us carpets.\n\n" +
-			"Proposal: We till him to get the hell out of here", +1),
+			"Proposal: We till him to get the hell out of here", 1),
 	};
 
 }
