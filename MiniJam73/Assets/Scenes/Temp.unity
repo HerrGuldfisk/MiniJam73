@@ -569,6 +569,10 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7151688298650198166, guid: 42cd33fba001da143a5872753e3f35d9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7151688298650198167, guid: 42cd33fba001da143a5872753e3f35d9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -953,8 +957,7 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1802345172805430802, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea2715133f49e043a1e56be9a8065f1, type: 3}
 --- !u!1001 &8661159281827325190
 PrefabInstance:
