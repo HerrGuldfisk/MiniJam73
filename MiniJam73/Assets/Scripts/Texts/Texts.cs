@@ -51,6 +51,69 @@ public class Texts : ScriptableObject
 
 		new textAndPoints("There is a man here trying to sell carpets.\n\n" +
 			"Proposal: We tell him to get the hell out of here", 1),
+
+		new textAndPoints("Your political opponents had a secret party where the corona viras was spread\n\n" +
+			"Proposal: Make an official statement shaming them about their irresponsibility", 5),
+
+		new textAndPoints("A welfare organisation is offering their support\n\n" +
+			"Proposal: Accept it", 2),
+
+		new textAndPoints("A big tech company is interested in working with you\n\n" +
+			"Proposal: Pay them in exchange for big data about public opinion", 6),
+
+		new textAndPoints("People in urban outskirts are starting to doubt your ideology\n\n" +
+			"Proposal: Support a local newspaper to write good things about you", 3),
+
+		new textAndPoints("A third world country discovered rich oil reserves\n\n" +
+			"Proposal: Give them financial aid in exchange for the right to use it", 6),
+
+		new textAndPoints("Your T-shirt is back and forth\n\n" +
+			"Proposal: Turn it around", 1),
+
+		new textAndPoints("Someone dropped a cup of cofee on your office floor\n\n" +
+			"Proposal: have a servant lick it up", 0),
+
+		new textAndPoints("A war has ended between two foreign countries\n\n" +
+			"Proposal: Go in and take control of them both", 6),
+
+		new textAndPoints("A loophole was discovered in the laws deciding the precidential election\n\n" +
+			"Proposal: Abuse it to extend your time as president", 12),
+
+		new textAndPoints("The worlds wealthiest woman invites you to her private party\n\n" +
+			"Proposal: Attend", 3),
+
+		new textAndPoints("Memes are popular\n\n" +
+			"Proposal: Put your best media team on posting one to show that you are in the loop", 1),
+
+		new textAndPoints("There is money left in this years budget\n\n" +
+			"Proposal: Spend it on bonuses for everyone in your party", -5),
+
+		new textAndPoints("People are storming the presidential building!\n\n" +
+			"Proposal: Listen to what they have to say", -4),
+
+		new textAndPoints("A smaller city was bombed unexpectedly\n\n" +
+			"Proposal: Make an aggressive reactive attack using nuclear missiles", -10),
+
+		new textAndPoints("People are demostrating about systemic racism\n\n" +
+			"Proposal: Take down some white people to compensate", -8),
+
+		new textAndPoints("A foreign country is requesting access to the nuclear codes\n\n" +
+			"Proposal: Give it to them", -12),
+
+		new textAndPoints("Your chef sat the kitchen on fire\n\n" +
+			"Proposal: Throw him into the soup", -1),
+
+		new textAndPoints("More and more youngsters are ditching class\n\n" +
+			"Proposal: Remove the concept of schooling", -4),
+
+		new textAndPoints("The environment is fucked\n\n" +
+			"Proposal: Ignore it and focus on what matters here and now", 9),
+
+		new textAndPoints("Someone hacked into our databases!\n\n" +
+			"Proposal: Impulsively burn the archives", -2),
+
+		new textAndPoints("Today is the world official dancing day\n\n" +
+			"Proposal: Go for a night out with the boys", -4),
 	};
 
 }
