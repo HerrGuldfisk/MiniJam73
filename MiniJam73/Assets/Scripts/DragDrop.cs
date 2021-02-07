@@ -35,7 +35,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 		if (cursor)
         {
 			cursor.SetHand(false);
-			cursor.SetImagePos((Vector2)transform.position + new Vector2(98, -400));
+			cursor.SetImagePos((Vector2)transform.position + new Vector2(120, -460));
 		}
 	}
 
