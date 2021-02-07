@@ -10,7 +10,6 @@ public class DocumentCounter : MonoBehaviour
 
 	private void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
 		if (_instance != null && _instance != this)
 		{
 			Destroy(this.gameObject);
