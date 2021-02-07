@@ -1035,4 +1035,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 353602707}
+  text: {fileID: 0}
   gameScenePath: Assets/Scenes/Temp.unity

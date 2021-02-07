@@ -11,7 +11,6 @@ public class Outro : MonoBehaviour
     [SerializeField] string introScenePath;
     [SerializeField] Image bg;
     [SerializeField] Color lightsOutColor;
-    public int gameCompletionTime = 376;
     int current;
     int total;
     List<string> texts = new List<string>();
@@ -88,7 +87,10 @@ public class Outro : MonoBehaviour
         texts.Add("");
         texts.Add("All these questions are making me tired");
         texts.Add("Well, its quiet late");
+
+        float gameCompletionTime = Playtime.playtime;
         texts.Add("After all, I have been sitting at this desk sorting papers for " + Mathf.Floor((float)gameCompletionTime/60)  +  " minutes and " + Mathf.Round(((((float)gameCompletionTime/60f)- Mathf.Floor((float)gameCompletionTime/60f)) * 60f)) + " seconds"); //ändra
+        
         texts.Add("That is quite a long time");
         texts.Add("Decisions sure are tiring to make like this");
         texts.Add("I think i'll just take a shower and then go to bed");

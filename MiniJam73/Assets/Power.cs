@@ -78,11 +78,13 @@ public class Power : MonoBehaviour
     void Win()
     {
         SceneManager.LoadScene(winScenePath);
+        Playtime.running = false;
     }
 
     void Loose()
     {
 		SceneManager.LoadScene(looseScenePath);
+        Playtime.running = false;
     }
 
     private void Update()
