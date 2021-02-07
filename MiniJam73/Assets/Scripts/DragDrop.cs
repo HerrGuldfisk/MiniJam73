@@ -19,6 +19,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 		// Debug.Log("OnDrag");
+
 		canvas.sortingOrder = 15;
 		canvasGroup.alpha = .8f;
 		canvasGroup.blocksRaycasts = false;

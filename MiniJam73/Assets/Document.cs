@@ -11,7 +11,8 @@ public class Document : MonoBehaviour
 
 	private void Awake()
 	{
-		transform.SetParent(GameObject.FindGameObjectWithTag("Paper Canvas").transform);
+		transform.parent.SetParent(GameObject.FindGameObjectWithTag("Paper Canvas").transform);
+		transform.parent.GetComponent<Canvas>().overrideSorting = true;
 	}
 
 	private void Start()
