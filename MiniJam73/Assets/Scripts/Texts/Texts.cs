@@ -46,7 +46,7 @@ public class Texts : ScriptableObject
 		new textAndPoints("A young politician is gaining on you in popularity.\n\n" +
 			"Proposal: Send out a hitman to secretly kill him.", 5),
 
-		new textAndPoints("There is a bunch of dogs running amok in the building!\n\n" + 
+		new textAndPoints("There is a bunch of dogs running amok in the building!\n\n" +
 			"Proposal: Release a bunch of cats too.", -4),
 
 		new textAndPoints("There is a man here trying to sell carpets.\n\n" +
@@ -136,7 +136,53 @@ public class Texts : ScriptableObject
 		new textAndPoints("A journalist is writing a hit piece on you \n\n" +
 					"Proposal: Throw a party and invite the journalist", -5),
 
+		new textAndPoints("Public opinion is plumeting.\n\n" +
+			"Proposal: Pretend like nothing", -3),
 
+		new textAndPoints("Oil prices are on the rise!\n\n" +
+			"Proposal: Conduct a \"friendly\" inspection in neighbouring countries.", 5),
+
+		new textAndPoints("The nuclear warhead reserve is getting low.\n\n" +
+			"Proposal: Construct more nuclear power plants, \"cheaper electricity for the poeple!\"", 6),
+
+		new textAndPoints("The grandkids are visiting\n\n" +
+			"Proposal: Bond with the family", -2),
+
+		new textAndPoints("Your term is coming to an end.\n\n" +
+			"Proposal: Rally the extrimists with hope of free guns", 3),
+
+		new textAndPoints("Your Cholesterol levels are getting dangerously high.\n\n" +
+			"Proposal: Ignore the doctors", -3),
+
+		new textAndPoints("Inhabitants have started saving money in their mattresses.\n\n" +
+			"Proposal: Confiscate all beds", 5),
+
+		new textAndPoints("Scientists want more money to research guns.\n\n" +
+			"Proposal: It's all about the sentiment, give them a dollar each", -4),
+
+		new textAndPoints("Inhabitants are complaining about lack of jobs.\n\n" +
+			"Proposal: Divert attention, approve hallucinogens", 10),
+
+		new textAndPoints("AI has started taking over the world.\n\n" +
+			"Proposal: Trick AI into mining bitcoins", 5),
+
+		new textAndPoints("Protesters have started blocking the roads.\n\n" +
+			"Proposal: Take your private helicopter to work", 0),
+
+		new textAndPoints("The democratic party is pushing for impeachment!\n\n" +
+			"Proposal: Sue them for coveting power", 8),
+
+		new textAndPoints("Paparazzi published pictures of you stealing from homeless.\n\n" +
+			"Proposal: Send extra pictures from better angles", -5),
+
+		new textAndPoints("Composers want to write a new national anthem.\n\n" +
+			"Proposal: Send them your mixtape, \"Velcro, what a rip-off\"", 3),
+
+		new textAndPoints("The average salary is going down.\n\n" +
+			"Proposal: Introduce SMS loans", 4),
+
+		new textAndPoints("Assistant: Something urgent.\n\n" +
+			"Proposal: Put in pile on right", 3),
 	};
 
 }
