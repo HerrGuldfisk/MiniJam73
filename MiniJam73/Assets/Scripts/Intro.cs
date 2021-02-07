@@ -39,6 +39,8 @@ public class Intro : MonoBehaviour
 
     public void CloseIntro()
     {
+		AudioManager.Instance.GetAudioSource("intro").Stop();
         SceneManager.LoadScene(nextScenePath);
+		AudioManager.Instance.PlayTheme();
     }
 }

@@ -57,12 +57,31 @@ public class AudioManager : MonoBehaviour
 		foreach (Sound s in sounds)
 		{
 			s.source = gameObject.AddComponent<AudioSource>();
+			s.source.name = s.name;
 			s.source.clip = s.clip;
 			s.source.volume = s.volume;
 			s.source.pitch = s.pitch;
 			s.source.loop = s.loop;
 			s.source.outputAudioMixerGroup = s.channel;
 		}
+	}
+
+	public AudioSource GetAudioSource(string _name)
+	{
+		AudioSource[] audioSources = GetComponents<AudioSource>();
+
+		foreach (AudioSource s in audioSources)
+		{
+			if (s.clip.name ==_name)
+			{
+				return s;
+			}
+			else
+			{
+				Debug.LogWarning("Sound: " + name + " not found!");
+			}
+		}
+		return null;
 	}
 
 	public void Play(string name, bool loop=false)
@@ -81,9 +100,9 @@ public class AudioManager : MonoBehaviour
 		s.source.Play();
 	}
 
-	public void PlayTimer()
+	public void PlayTheme()
 	{
-		Play("Tick-Tock", true);
+		Play("MainTheme", true);
 		tickTock = true;
 	}
 
@@ -93,11 +112,7 @@ public class AudioManager : MonoBehaviour
 
 		foreach (AudioSource s in audioSources)
 		{
-			if (s.clip == null) { return; }
-
-			Debug.Log(s.clip.ToString());
-
-			if (s.clip.ToString() == "soundtrack")
+			if (s.clip.name == "soundtrack")
 			{
 				Debug.Log("enter clip");
 				if(Power.Instance.power >= 80)
