@@ -18,7 +18,6 @@ public class Playtime : MonoBehaviour
         if (running)
         {
             playtime += Time.deltaTime;
-            Debug.Log(playtime);
         }
     }
 }
