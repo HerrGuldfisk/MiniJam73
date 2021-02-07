@@ -1059,6 +1059,10 @@ PrefabInstance:
       value: MainTheme
       objectReference: {fileID: 0}
     - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6269870e2b3850845b9cac588ec00240, type: 3}
+    - target: {fileID: 8661159280573542801, guid: 6c6ae5cd7e97e2c4b84625867b80cd8b, type: 3}
       propertyPath: sounds.Array.data[7].name
       value: DealDocument
       objectReference: {fileID: 0}

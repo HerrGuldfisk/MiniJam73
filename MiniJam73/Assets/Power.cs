@@ -12,7 +12,10 @@ public class Power : MonoBehaviour
     [SerializeField] Text endText;
     [SerializeField] float powerLossPerSecond;
 
-	private static Power _instance;
+    float counter = 1;
+    public float power;
+
+    private static Power _instance;
 	public static Power Instance
 	{
 		get { return _instance; }
@@ -29,10 +32,13 @@ public class Power : MonoBehaviour
 		_instance = this;
 	}
 
+<<<<<<< HEAD
 	float counter = 1;
 
     public float power { get; private set; }
 
+=======
+>>>>>>> de6e5243003d7adfc35af9a2b64082cd8a5b4b6a
     private void Start()
     {
 		endScreen.gameObject.SetActive(false);
