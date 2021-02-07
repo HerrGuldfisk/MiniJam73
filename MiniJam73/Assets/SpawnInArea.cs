@@ -9,14 +9,15 @@ public class SpawnInArea : MonoBehaviour
 	[SerializeField] bool singleSpawn;
 	[SerializeField] float singleSpawnTimer;
 	[SerializeField] bool singleRandomized;
+	[SerializeField] float singleMinRandom;
+	[SerializeField] float singleMaxRandom;
 
 	[SerializeField] bool groupSpawn;
 	[SerializeField] float groupSpawnTimer;
 	[SerializeField] bool groupRandomized;
+	[SerializeField] float groupMinRandom;
+	[SerializeField] float groupMaxRandom;
 
-	[SerializeField] bool randomized;
-	[SerializeField] float minRandom;
-	[SerializeField] float maxRandom;
 
 	float singleTimer;
 	float groupTimer;
@@ -50,16 +51,17 @@ public class SpawnInArea : MonoBehaviour
 
 			if (singleTimer <= 0)
 			{
+				AudioManager.Instance.Play("DealDocument");
 				Spawn();
 
-				if (randomized)
+				if (singleRandomized)
 				{
-					singleTimer = Random.Range(singleSpawnTimer - minRandom, singleSpawnTimer + maxRandom);
+					singleTimer = Random.Range(singleSpawnTimer - singleMinRandom, singleSpawnTimer + singleMaxRandom);
 				}
 			}
 		}
 
-		if (singleSpawn)
+		if (groupSpawn)
 		{
 			groupTimer -= Time.deltaTime;
 
@@ -67,9 +69,9 @@ public class SpawnInArea : MonoBehaviour
 			{
 				GroupSpawn();
 
-				if (randomized)
+				if (groupRandomized)
 				{
-					groupTimer = Random.Range(groupSpawnTimer - minRandom, groupSpawnTimer + maxRandom);
+					groupTimer = Random.Range(groupSpawnTimer - groupMinRandom, groupSpawnTimer + groupMaxRandom);
 				}
 			}
 		}
