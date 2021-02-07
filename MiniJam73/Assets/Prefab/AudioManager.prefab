@@ -43,7 +43,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a90f681cdcad0e4b9a5230374b36f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 0}
+  mixer: {fileID: 24100000, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
   changedValue: 
-  sounds: []
+  sounds:
+  - name: GrabDocument
+    clip: {fileID: 0}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DropDocument
+    clip: {fileID: 8300000, guid: 6269870e2b3850845b9cac588ec00240, type: 3}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ApproveDocument
+    clip: {fileID: 0}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RejectDocument
+    clip: {fileID: 0}
+    channel: {fileID: 2024049351113826497, guid: b2ad3f878e737654d9d72adef19ed365, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   paramNames: []
