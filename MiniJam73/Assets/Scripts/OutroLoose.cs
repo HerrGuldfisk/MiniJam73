@@ -26,7 +26,8 @@ public class OutroLoose : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(gameScenePath);
+		DocumentCounter.Instance.documents.RemoveRange(0, DocumentCounter.Instance.documents.Count);
+		SceneManager.LoadScene(gameScenePath);
     }
 
     public void Quit()

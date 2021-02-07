@@ -9,7 +9,7 @@ public class Power : MonoBehaviour
     [SerializeField] Slider slider;
 
     [SerializeField] float maxPower = 100;
-    [SerializeField] float startPower = 15;
+    [SerializeField] float startPower = 40;
     [SerializeField] float powerLossPerSecond;
 
     [SerializeField] string winScenePath;
@@ -92,7 +92,7 @@ public class Power : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter <= 0)
         {
-            AddPower(-powerLossPerSecond, false);
+            AddPower( -0.1f * DocumentCounter.Instance.documents.Count , false);
             counter = 1;
         }
     }

@@ -20,13 +20,16 @@ public class SpawnInArea : MonoBehaviour
 
 
 	float singleTimer;
-	float groupTimer;
+	float groupTimer = 30;
 	float totTime = 0;
 
 	[SerializeField] int shortGame = 45;
 	[SerializeField] int mediumGame = 90;
 	[SerializeField] int longGame = 135;
 	[SerializeField] int extremeGame = 180;
+
+
+	float noDocTimer = 0;
 
     private void Start()
     {
@@ -76,7 +79,6 @@ public class SpawnInArea : MonoBehaviour
 			}
 		}
 
-
 		/*
         singleTimer -= Time.deltaTime;
         if (singleTimer < 0)
@@ -94,6 +96,23 @@ public class SpawnInArea : MonoBehaviour
         }*/
 	}
 
+	private void FixedUpdate()
+	{
+
+		if (DocumentCounter.Instance.documents.Count == 0)
+		{
+			noDocTimer -= Time.fixedDeltaTime;
+
+			if(noDocTimer <= 0)
+			{
+				AudioManager.Instance.Play("DealDocument");
+				Spawn();
+
+				noDocTimer = Random.Range(0.3f, 1.2f);
+			}
+		}
+	}
+
 
 	private void GroupSpawn()
 	{
@@ -102,19 +121,19 @@ public class SpawnInArea : MonoBehaviour
 		// Number of documents based on time.
 		if (totTime <= shortGame)
 		{
-			x = 4;
+			x = 2;
 		}
 		else if(totTime <= mediumGame)
 		{
-			x = 6;
+			x = 3;
 		}
 		else if(totTime <= longGame)
 		{
-			x = 8;
+			x = 4;
 		}
 		else if (totTime <= extremeGame)
 		{
-			x = 10;
+			x = 4;
 		}
 
 		AudioManager.Instance.Play("DealDocument");
