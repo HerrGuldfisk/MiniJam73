@@ -35,7 +35,7 @@ public class DropZone : MonoBehaviour
 			if (manager.heldDoc)
             {
 				Document doc = manager.heldDoc.GetComponent<Document>();
-				if (rectOverlaps(doc.GetComponent<RectTransform>(), rectTrans))
+				if (rectOverlaps(doc.transform.GetChild(1).GetComponent<RectTransform>(), rectTrans))
 				{
 					if (feedbackText)
 					{
