@@ -52,7 +52,7 @@ public class Texts : ScriptableObject
 		new textAndPoints("There is a man here trying to sell carpets.\n\n" +
 			"Proposal: We tell him to get the hell out of here", 1),
 
-		new textAndPoints("Your political opponents had a secret party where the corona viras was spread\n\n" +
+		new textAndPoints("Your political opponents had a secret party where the corona virus was spread\n\n" +
 			"Proposal: Make an official statement shaming them about their irresponsibility", 5),
 
 		new textAndPoints("A welfare organisation is offering their support\n\n" +
@@ -70,7 +70,7 @@ public class Texts : ScriptableObject
 		new textAndPoints("Your T-shirt is back and forth\n\n" +
 			"Proposal: Turn it around", 1),
 
-		new textAndPoints("Someone dropped a cup of cofee on your office floor\n\n" +
+		new textAndPoints("Someone dropped a cup of coffee on your office floor\n\n" +
 			"Proposal: have a servant lick it up", 0),
 
 		new textAndPoints("A war has ended between two foreign countries\n\n" +
@@ -114,6 +114,29 @@ public class Texts : ScriptableObject
 
 		new textAndPoints("Today is the world official dancing day\n\n" +
 			"Proposal: Go for a night out with the boys", -4),
+
+		new textAndPoints("A social media platform is used to criticise your reign \n\n" +
+			"Proposal: Ban that platform", 6),
+
+		new textAndPoints("Religious leaders want to join forces with you \n\n" +
+					"Proposal: Arrange a meeting with them", -7),
+
+		new textAndPoints("Journalists are questioning your competence \n\n" +
+					"Proposal: Behead a journalist to set an example", 2),
+
+		new textAndPoints("There are rumours of a military coup \n\n" +
+					"Proposal: Build a private army", 10),
+
+		new textAndPoints("Your resemblance to a fictional character is mocked online \n\n" +
+					"Proposal: Ban fictional characters", 0),
+
+		new textAndPoints("A musician has written a diss track aimed at you \n\n" +
+					"Proposal: Write a diss track answer", -4),
+
+		new textAndPoints("A journalist is writing a hit piece on you \n\n" +
+					"Proposal: Throw a party and invite the journalist", -5),
+
+
 	};
 
 }
